@@ -1,123 +1,62 @@
 body {
-    background-color: white;
-    padding: 50px;
-    padding-top: 0;
+  background-color: white;
+  padding: 0 50px 50px 50px;
 }
-.navigation_bar{
-    background-color: white;
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    top: 0%;
-    margin-top: 20px;
-    padding: 4px 4px;
-    justify-content: space-between;
-    align-items: center;
-    /* border-radius: 4px; */
+/* added a little section for the nav-bar area so the font color is visible and made the about me highlighted */
+.nav_bar,
+.nav_bar a {
+  color: black;
 }
-.navigation_bar h2{
-    color: black;
-    position:relative;
-    padding-bottom: 10px;
-    margin-bottom: 10px;
-}
-.navigation_bar a{
-    color: black;
-    text-decoration: none;
-}
-a {
-    color: black;
-    text-decoration: none;
-}
-a:hover {
-    color: purple;
-}
-.main_nav_bar p{
-    font-size: 20px;
-    color: black;
-}
-.main_nav_bar h2{
-    color: purple;
-    font-size: 60px;
-}
-.other_nav_bars{
-    padding-top: 10px;
-    float: right;
-    font-size: 17px;
-}
-.other_nav_bars ul{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 80px;
-    font-weight: 200;
-    list-style: none;
-}
-.about_me{
-    position: relative;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 100%;
-    height: 90%;
+
+.about_me {
+  /* position: relative; I am taking this out because it makes no sense here. You only need thi if you are going to 
+    position: absolute; in the direct child which would make more sense. I will be commenting it out  */
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+grid-gap: .5rem;
+  width: 100%;
+  height: 90%;
 }
 
 .slider-container {
-    width: 90%;
-    overflow: hidden;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 250px;
-    height: 300px;
-    padding: 20px 100px;
-    /* border: 5px solid white; */
-    /* border-radius: 10px; */
-    background-color: white;
-    padding-left: 0px;
-}
-.slider-container img{
-    width: 100%;
-    height: 100%;
-    margin-right: 10px;
-    margin-left: 70px;
+  width: 90%;
+ 
+  /* height: 400px; */
+  overflow-x: hidden;
+  scrollbar-gutter: hidden;
 }
 
 .slider {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  min-height: 400px;
+  min-width: 300px;
+  /* took out a lot of stuff not needed here I am working on fixing the image height */
 }
 
 .slide {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
-.meet-me{
-    display: grid;
-    color: black;
-    margin-left: 50px;
-    align-items: end;
-    max-width: 500px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+.meet-me {
+  display: grid;
+  color: black;
+  margin-left: 50px;
+  align-items: end;
+  max-width: 500px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
-.meet-me h2{
-    color: white;
-    font-size: 30px;
-    font-style: italic;
-    text-shadow: -8px -8px 8px purple, 8px -8px 8px purple, -8px 8px 8px purple, 8px 8px 8px purple;
+.meet-me h2 {
+  color: white;
+  font-size: 30px;
+  font-style: italic;
+  text-shadow: -8px -8px 8px purple, 8px -8px 8px purple, -8px 8px 8px purple,
+    8px 8px 8px purple;
+  margin: 1rem;
 }
-.contact{
-    margin-top: 4rem;
-    display: flex;
-    justify-content: center;
-    gap: 24px;
-}
-.contact a {
-    display: inline-block;
-    padding-inline: 24px;
-    padding-block: 6px;
-    color: white;
-    text-decoration: none;
-    background-color: purple;
-    border: 1px solid black;
+
+.meet-me p {
+  font-size: var(--clamp-paragraph-text);
+  
 }

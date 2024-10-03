@@ -1,107 +1,47 @@
-/* adding this so that nothing haves a margin or padding and all the boxes are border box */
-*,
-*::before,
-*::after {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
-/* using a root to declare variables for fonts and colors  */
-:root {
-  /* font variables */
-  --clamp-regular-text: clamp(0.5rem, 4svw, 1.8rem);
-  --clamp-h1: clamp(0.8rem, 4svw, 2.4rem);
-  --clamp-h2:clamp(1rem, 4svw, 2rem);
-
-  /* color variables */
-}
 body {
   background-color: black;
-  padding: 0 50px 50px 50px;
 }
-.navigation_bar {
-  display: flex;
-  flex-wrap: wrap;
+
+.welcome {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 750px);
+  align-items: center;
+  justify-content: center;
+  min-height: 100svh;
+  width: 100svw;
+  color: white;
+}
+.welcome .greeting {
   width: 100%;
-  padding: 4px 4px;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 20px;
+  text-align: left;
+  margin: 1rem;
+  line-height: 2.5rem;
 }
-.navigation_bar a {
-  color: white;
-  text-decoration: none;
+.welcome .greeting h1 {
+  font-size: var(--clamp-h1);
+}
+.welcome .greeting p {
+  width: var(--clamp-paragraph-text);
   font-size: var(--clamp-regular-text);
+  text-indent: 0.8rem;
 }
-.main_nav_bar p {
-  font-size: 20px;
-  color: white;
-}
-.main_nav_bar h2 {
-  color: purple;
-  font-size: var(--clamp-h2);
-}
-.other_nav_bars {
-  padding-top: 10px;
-  float: right;
-  font-size: 17px;
-}
-.other_nav_bars ul {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 80px;
-  font-weight: 200;
-  list-style: none;
-}
-a:hover {
-  color: rgb(237, 105, 237);
-}
-.about {
-  color: white;
-  display: flex;
-  /* flex-wrap: wrap; */
-  gap: 48px;
-  align-items: center;
-  margin-top: 5rem;
-}
-img {
-  max-width: 100%;
-  object-fit: cover;
-  height: 300px;
-  border-radius: 8px;
-  transform: rotate(-8deg);
-  transition: transform 400ms ease;
-}
-img:hover {
-  transform: rotate(0deg);
-}
-.hello_fairy {
-  font-family: Georgia, "Times New Roman", Times, serif;
-  width: 50%;
-}
-.about_image {
-  width: 50%;
+
+.welcome .welcome_image {
   display: flex;
   justify-content: center;
+  
 }
-.hello {
-  padding-bottom: 0px;
+
+.welcome .welcome_image img {
+  width: clamp(10rem, 15svw, 20rem);
+  transform: rotate(8deg);
+  transition: all 0.3s ease-in-out;
+  border-radius: 10px;
 }
-.hello h1 {
-  font-size: var(--clamp-h1);
-  margin-bottom: 0px;
+.welcome .welcome_image img:hover {
+  transform: rotate(0deg);
 }
-.hello_fairy p {
-  line-height: 24px;
-}
-.hello_fairy h1 {
-  font-size: 64px;
-  margin-top: 2px;
-}
-.name {
-  padding-top: 0px;
-}
+
 .hire_section button {
   color: purple;
   font-size: 20px;
@@ -112,24 +52,6 @@ img:hover {
   margin-top: 1rem;
   border: none;
 }
-.little_intro a {
+.intro a {
   color: rgb(237, 105, 237);
-  display: inline-block;
-  margin-left: 4px;
-  padding-inline: 12px;
-  padding-block: 4px;
-}
-.contact {
-  margin-top: 4rem;
-  display: flex;
-  justify-content: center;
-  gap: 24px;
-}
-.contact a {
-  display: inline-block;
-  padding-inline: 24px;
-  padding-block: 6px;
-  color: rgb(237, 105, 237);
-  text-decoration: none;
-  border: 1px solid white;
 }
