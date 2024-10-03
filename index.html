@@ -5,9 +5,23 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- adding the link to font awesome fonts  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
     <title>Mayowa Oluwaseyi Ojo's Portfolio</title>
+    <!-- I am adding an image to the top of your page called a favicon or favorite icon.
+         This will show something other than a bland cirle on the top of the page     
+    -->
+    <link rel="shortcut icon" href="./src/img/fairy.gif" type="image/x-icon" />
     <link rel="stylesheet" href="./src/css/index.css" />
-    <script src="./src/js/main.js"></script>
+    <script defer src="./src/js/main.js"></script>
   </head>
   <body>
     <div class="navigation_bar">
@@ -44,7 +58,7 @@
           <div class="hello">
             <h1>Hello,</h1>
           </div>
-          <div class="name">
+          <div class="my_name">
             <h1>It's me, CloudFairy!🌩️🧚‍♀️</h1>
           </div>
           <div class="little_intro">
@@ -62,8 +76,9 @@
               <i>Fun fact, I designed and coded these web pages! </i>
             </p>
           </div>
-          <div class="hire_me">
-            <button>Hire Me</button>
+          <!-- changed the class to hire section and the button gave an ID to it called hire button I don' t see an hireMeFormInner that can be from somewhere else  -->
+          <div class="hire_section">
+            <button id="hire-button">Hire Me</button>
           </div>
         </div>
         <div class="about_image">
@@ -71,9 +86,16 @@
         </div>
       </div>
       <div class="contact" id="contacts">
-        <a href="mailto:seyidiamond11@gmail.com" target="_blank">🧚‍♀️Email🧚‍♀️</a>
-        <a href="https://github.com/Seyi-Ojo">🧚‍♀️GitHub🧚‍♀️</a>
-        <a href="https://twitter.com/the_cloudfairy">🧚‍♀️Twitter🧚‍♀️</a>
+        <!-- I am taking off all those fairies and I will add icons for them instead using   -->
+        <a href="mailto:seyidiamond11@gmail.com" target="_blank">
+          <i class="fa-regular fa-envelope"></i>
+        </a>
+        <a href="https://github.com/Seyi-Ojo">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="https://twitter.com/the_cloudfairy">
+          <i class="fa-brands fa-square-x-twitter"></i>
+        </a>
       </div>
     </div>
   </body>

@@ -1,4 +1,4 @@
-const hireMeButton = document.getElementById('hireMeButton');
+const hireMeButton = document.getElementById( "hire-button");
 const hireMeForm = document.getElementById('hireMeForm');
 const hireMeFormInner = document.getElementById('hireMeFormInner');
 

@@ -1,120 +1,135 @@
-body{
-    background-color: black;
-    padding: 50px;
-    padding-top: 0;
+/* adding this so that nothing haves a margin or padding and all the boxes are border box */
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
-.navigation_bar{
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    top: 0%;
-    padding: 4px 4px;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 20px;
-    /* border-radius: 4px; */
+
+/* using a root to declare variables for fonts and colors  */
+:root {
+  /* font variables */
+  --clamp-regular-text: clamp(0.5rem, 4svw, 1.8rem);
+  --clamp-h1: clamp(0.8rem, 4svw, 2.4rem);
+  --clamp-h2:clamp(1rem, 4svw, 2rem);
+
+  /* color variables */
 }
-.navigation_bar a{
-    color: white;
-    text-decoration: none;
+body {
+  background-color: black;
+  padding: 0 50px 50px 50px;
 }
-.main_nav_bar p{
-    font-size: 20px;
-    color: white;
+.navigation_bar {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 4px 4px;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
 }
-.main_nav_bar h2{
-    color: purple;
-    font-size: 60px;
+.navigation_bar a {
+  color: white;
+  text-decoration: none;
+  font-size: var(--clamp-regular-text);
 }
-.other_nav_bars{
-    padding-top: 10px;
-    float: right;
-    font-size: 17px;
+.main_nav_bar p {
+  font-size: 20px;
+  color: white;
 }
-.other_nav_bars ul{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 80px;
-    font-weight: 200;
-    list-style: none;
+.main_nav_bar h2 {
+  color: purple;
+  font-size: var(--clamp-h2);
+}
+.other_nav_bars {
+  padding-top: 10px;
+  float: right;
+  font-size: 17px;
+}
+.other_nav_bars ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 80px;
+  font-weight: 200;
+  list-style: none;
 }
 a:hover {
-    color: rgb(237, 105, 237);
+  color: rgb(237, 105, 237);
 }
-.about{
-    color: white;
-    display: flex;
-    /* flex-wrap: wrap; */
-    gap: 48px;
-    align-items: center;
-    margin-top: 5rem;
+.about {
+  color: white;
+  display: flex;
+  /* flex-wrap: wrap; */
+  gap: 48px;
+  align-items: center;
+  margin-top: 5rem;
 }
 img {
-    max-width: 100%;
-    object-fit: cover;
-    height: 300px;
-    border-radius: 8px;
-    transform: rotate(-8deg);
-    transition: transform 400ms ease;
+  max-width: 100%;
+  object-fit: cover;
+  height: 300px;
+  border-radius: 8px;
+  transform: rotate(-8deg);
+  transition: transform 400ms ease;
 }
-img:hover{
-    transform: rotate(0deg);
+img:hover {
+  transform: rotate(0deg);
 }
-.hello_fairy{
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    width: 50%;
+.hello_fairy {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  width: 50%;
 }
 .about_image {
-    width: 50%;
-    display: flex;
-    justify-content: center;
+  width: 50%;
+  display: flex;
+  justify-content: center;
 }
-.hello{
-    padding-bottom: 0px;
+.hello {
+  padding-bottom: 0px;
 }
-.hello h1{
-    font-size: 50px;
-    margin-bottom: 0px;
+.hello h1 {
+  font-size: var(--clamp-h1);
+  margin-bottom: 0px;
 }
-.hello_fairy p{
-    line-height: 24px;
+.hello_fairy p {
+  line-height: 24px;
 }
-.hello_fairy h1{
-    font-size: 64px;
-    margin-top: 2px;
+.hello_fairy h1 {
+  font-size: 64px;
+  margin-top: 2px;
 }
-.name{
-    padding-top: 0px;
+.name {
+  padding-top: 0px;
 }
-.hire_me button{
-    color: purple;
-    font-size: 20px;
-    font-family:Georgia, 'Times New Roman', Times, serif;
-    padding-inline: 22px;
-    padding-block: 8px;
-    cursor: pointer;
-    margin-top: 1rem;
-    border: none;
+.hire_section button {
+  color: purple;
+  font-size: 20px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  padding-inline: 22px;
+  padding-block: 8px;
+  cursor: pointer;
+  margin-top: 1rem;
+  border: none;
 }
-.little_intro a{
-    color: rgb(237, 105, 237);
-    display: inline-block;
-    margin-left: 4px;
-    padding-inline: 12px;
-    padding-block: 4px;
-
+.little_intro a {
+  color: rgb(237, 105, 237);
+  display: inline-block;
+  margin-left: 4px;
+  padding-inline: 12px;
+  padding-block: 4px;
 }
-.contact{
-    margin-top: 4rem;
-    display: flex;
-    justify-content: center;
-    gap: 24px;
+.contact {
+  margin-top: 4rem;
+  display: flex;
+  justify-content: center;
+  gap: 24px;
 }
 .contact a {
-    display: inline-block;
-    padding-inline: 24px;
-    padding-block: 6px;
-    color: rgb(237, 105, 237);
-    text-decoration: none;
-    border: 1px solid white;
+  display: inline-block;
+  padding-inline: 24px;
+  padding-block: 6px;
+  color: rgb(237, 105, 237);
+  text-decoration: none;
+  border: 1px solid white;
 }
