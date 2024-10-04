@@ -1,7 +1,7 @@
 /*  importing fonts for the site roboto is a nicer one */
- 
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
- 
+
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
 /* adding this so that nothing haves a margin or padding and all the boxes are border box */
 *,
 *::before,
@@ -14,14 +14,14 @@
 /* using a root to declare variables for fonts and colors  */
 :root {
   /* font variables */
-  --clamp-regular-text: clamp(0.5rem, 3.5svw, 1.8rem); /* changed out svw number works better  */
+  --clamp-nav-bar-links: clamp(0.5rem, 5svw, 2rem);
+  --clamp-regular-text: clamp(0.5rem, 3.5svw, 1.8rem);
   --clamp-h1: clamp(1.2rem, 4svw, 3rem);
   --clamp-h2: clamp(1rem, 4svw, 2rem);
   --contact-me-clamp: clamp(1rem, 5svw, 2rem);
-  --clamp-paragraph-text: clamp(38ch, 60svw, 65ch);
+  --clamp-paragraph-text: clamp(38ch, 60svw, 75ch);
   /* color variables */
   --hover-color: #ea6cea;
-  
 }
 /*  I will start using media queries in the bottom to change out the layout to mobile but clamp works up to 500px  */
 /* adding smooth scrolling to the html I prefer to add it here you can add it to the html file itself */
@@ -29,7 +29,7 @@ html {
   scroll-behavior: smooth;
   line-height: 2rem;
 }
-body{
+body {
   font-family: "EB Garamond", serif;
   font-optical-sizing: auto;
   font-weight: 500;
@@ -37,44 +37,39 @@ body{
   overflow-x: clip;
 }
 
-/* made one nav bar section and and added a new css file called header and addded the navbar sectiona and the reset to it */
+/* Header styles for the navbar */
+header {
+  color: white;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-.nav_bar {   
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    padding: 1rem;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 20px;
-    color: white;
-    font-size: var(--clamp-regular-text);
-  }
-  .logo{
-    padding: .4rem;
-    border-radius: 100%;
-    margin:1rem;
-  }
-  .nav_bar ul{
-    display: flex;
-    gap:1rem;
-    text-decoration: none;
-    list-style: none;
-    margin:1rem;
-  }
-  
-  .nav_bar a {
-    color: white;
-    text-decoration: none;
-    font-size: var(--clamp-regular-text);
-    border: 1px solid transparent;
-    padding: .3rem;
-  }
-  .nav_bar .active{
-    color: #ed69ed;
-    border-bottom: 1px solid #ed69ed;
-    padding: .3rem;
-  }   
-   .nav_bar a:hover {
-    color: #ed69ed;
-  } 
+/* Logo styles */
+.logo {
+  font-size: var(--clamp-h1);
+  font-weight: bold;
+  margin: 2rem;
+}
+
+/* Navigation bar styles */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px; 
+  margin:1rem;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: var(--clamp-regular-text);
+}
+nav ul li a.active {
+  color: #ea6cea;
+  text-decoration: underline;
+}
+nav ul li a:hover {
+  text-decoration: underline;
+}

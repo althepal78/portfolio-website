@@ -1,1 +1,4 @@
 Helping someone redo their site named cloud fairy on x.com
+I changed out a lot of their code and used chatgpt to recreate it simpler and more formatted. The simple stuff
+I changed the names to a_pic_image0.jpg to 4 and just named them slider_1.jpg to _4.jpg. I know I deleted a pic because it haves nothing to do with this site. If You want it back in I will add it back. I also resized all these images so you basically can allow them to use it's widhth 100% and not be to big. I kept the originals not touched in there as well. I am working on your about page with the slider as well. then I will work on your contact page tomorrow.
+Yes I am using chatGPT to re work your design like you had it but make it more responsive trying not to use media queries and you can work on using those yourself :) practice with that :)

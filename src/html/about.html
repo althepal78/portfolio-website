@@ -14,108 +14,64 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="../css/header.css" />
-    <link rel="stylesheet" href="../css/contact-links.css" />
+    <link rel="stylesheet" href="../css/footer.css" />
     <link rel="stylesheet" href="../css/about.css" />
     <script defer src="../js/about.js"></script>
   </head>
 
   <body>
-    <div class="nav_bar">
+    <header>
       <div class="logo">🧚‍♀️</div>
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a class="active" href="/src/html/about.html">About</a></li>
+          <li><a href="/src/html/contact.html">Contact Me</a></li>
+          <li>
+            <a href="https://medium.com/@thecloudfairy" target="_blank">Blog</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
 
-      <ul>
-        <li>
-          <a href="/">Home</a>
-        </li>
-        <li>
-          <a class="active" href="about.html">About Me</a>
-        </li>
-        <li>
-          <a href="contact.html">Contact Me</a>
-        </li>
-        <li>
-          <a href="https://medium.com/@thecloudfairy" target="_blank"> Blog </a>
-        </li>
-      </ul>
-    </div>
-
-    <div class="about_me">
-      <div class="slider-container">
-        <div class="slider">
-          <img
-            class="slide"
-            src="../img/a_pic_image1.jpg"
-            alt="mayowa-ojo-thecloudfairy 1"
-          />
-          <img
-            class="slide"
-            src="../img/a_pic_image2.jpg"
-            alt="mayowa-ojo-thecloudfairy 2"
-          />
-          <img
-            class="slide"
-            src="../img/a_pic_image4.jpg"
-            alt="mayowa-ojo-thecloudfairy 4"
-          />
-          <img
-            class="slide"
-            src="../img/a_pic_image3.jpg"
-            alt="mayowa-ojo-thecloudfairy 3"
-          />
-        </div>
+    <main>
+      <div class="grid-container">
+          <div class="grid-item">
+              <div class="slider-container">
+                  <div class="slider">
+                      <img class="slide" src="/src/img/slider_1.jpg" alt="mayowa-ojo-thecloudfairy 1" />
+                      <img class="slide" src="/src/img/slider_2.jpg" alt="mayowa-ojo-thecloudfairy 2" />
+                      <img class="slide" src="/src/img/slider_3.jpg" alt="mayowa-ojo-thecloudfairy 3" />
+                      <img class="slide" src="/src/img/slider_4.jpg" alt="mayowa-ojo-thecloudfairy 4" />
+                  </div>
+              </div>
+          </div>
+          <div class="grid-item">
+              <div class="meet-me">
+                  <h2>Meet Me...</h2>
+                  <p>Hello there, my name is Mayowa Oluwaseyi Ojo, you can also call me CloudFairy!🌩️🧚‍♀️</p>
+                  <p>I am a DevOps Engineer, a Site Reliability Engineer, and a Technical Writer looking forward to delving into Developer Relations. I love to solve problems and I do it for a living.</p>
+                  <h3>If you would like to reach out to me, kindly reach below!</h3>
+              </div>
+          </div>
       </div>
+  </main>
 
-      <div class="meet-me">
-        <h2>Meet Me...</h2>
-        <!-- added paragraph tags to make it easier to work with -->
-        <p>
-          Hello there, my name is Mayowa Oluwaseyi Ojo, you can also call me
-          CloudFairy!🌩️🧚‍♀️
-        </p>
-        <p>
-          I am a DevOps Engineer, a Site Reliability Engineer and a Technical
-          Writer looking forward to delving into Developer Relations. I love to
-          solve problems and I do it for a living.
-        </p>
-        <p>
-          I took up interest in software developent in 2020 and since then, I
-          have worked on various projects that tested my skills. As time went
-          by, I became more and more interested in Cloud Engineering and decided
-          to learn it.
-        </p>
-        <p>
-          I am now a DevOps Engineer. DevOps is an interesting aspect of
-          software and cloud development that helps developers and organizations
-          work more efficiently.
-        </p>
-        <p>
-          The several interesting topics in DevOps are more thn enough to keep
-          you busy and entertained. Some of the tools and technology that I have
-          been working on are: Docker, Jenkins, Ansible, Terraform, and
-          Kubernetes. Does anyone sound familiar to you?
-        </p>
-
-        <h3>If you would like to reach out to me, kindly reach below!</h3>
-        <!-- you had the closing tag somehow <h3/> vs </h3> changed it out. No biggie just pointing 
-             it out so you see how easy it is to over look a lot  
-        -->
+    <footer>
+      <div class="contact" id="contacts">
+          <a href="mailto:seyidiamond11@gmail.com" target="_blank">
+              <i class="fa-regular fa-envelope"></i>
+          </a>
+          <a href="https://github.com/Seyi-Ojo" target="_blank">
+              <i class="fa-brands fa-github"></i>
+          </a>
+          <a href="https://twitter.com/the_cloudfairy" target="_blank">
+              <i class="fa-brands fa-square-x-twitter"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/mayowa-ojo-thecloudfairy/" target="_blank">
+              <i class="fa-brands fa-linkedin"></i>
+          </a>
       </div>
-    </div>
-
-    <div class="contact" id="contacts">
-      <!-- I am taking off all those fairies and I will add icons for them instead using   -->
-      <a href="mailto:seyidiamond11@gmail.com" target="_blank">
-        <i class="fa-regular fa-envelope"></i>
-      </a>
-      <a href="https://github.com/Seyi-Ojo">
-        <i class="fa-brands fa-github"></i>
-      </a>
-      <a href="https://twitter.com/the_cloudfairy">
-        <i class="fa-brands fa-square-x-twitter"></i>
-      </a>
-      <a href="https://www.linkedin.com/in/mayowa-ojo-thecloudfairy/">
-        <i class="fa-brands fa-linkedin"></i>
-      </a>
-    </div>
+  </footer>
   </body>
 </html>

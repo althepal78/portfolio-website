@@ -21,72 +21,75 @@
     -->
     <link rel="shortcut icon" href="./src/img/fairy.gif" type="image/x-icon" />
     <link rel="stylesheet" href="./src/css/header.css" />
-    <link rel="stylesheet" href="./src/css/contact-links.css" />
+
+    <link rel="stylesheet" href="./src/css/footer.css" />
     <link rel="stylesheet" href="./src/css/index.css" />
     <script defer src="./src/js/main.js"></script>
   </head>
   <body>
-    <div class="nav_bar">
+    <!-- Navigation Bar  -->
+    <header>
       <div class="logo">🧚‍♀️</div>
+      <nav>
+        <ul>
+          <li><a class="active" href="/">Home</a></li>
+          <li><a href="/src/html/about.html">About</a></li>
+          <li><a href="/src/html/contact.html">Contact Me</a></li>
+          <li>
+            <a href="https://medium.com/@thecloudfairy" target="_blank">Blog</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
 
-      <ul>
-        <li>
-          <a href="/" class="active">Home</a>
-        </li>
-        <li>
-          <a href="./src/html/about.html">About Me</a>
-        </li>
-        <li>
-          <a href="./src/html/contact.html">Contact Me</a>
-        </li>
-        <li>
-          <a href="https://medium.com/@thecloudfairy" target="_blank"
-            >My Blog</a
-          >
-        </li>
-      </ul>
-    </div>
-
-    
-    <div class="welcome">
-      <div class="greeting">
-        <h1>Hello, It's me, CloudFairy!🌩️🧚‍♀️</h1>
-        <p>
-          I am a Cloud Engineer. I solve problems for a living and work
-          diligently. Advanced experience in Linux and Mac OSs, CI/CD
-          automation/management (Jenkins) Experience with configuration
-          management and automation (Terraform, Ansible). Computer Science
-          Student at UoPeople, California, USA. Kindly find me on
-          <a href="https://github.com/Seyi-Ojo" target="_blank">
-            <i class="fa-brands fa-github"></i
-          ></a>
-
+    <!-- Grid Content -->
+    <div class="grid-container">
+      <!-- First Column with centered block of text -->
+      <div class="grid-item">
+        <div class="centered-div">
+          <h1>Hello, It's me, CloudFairy!🌩️🧚‍♀️</h1>
+          <p>
+            I am a Cloud Engineer. I solve problems for a living and work
+            diligently. Advanced experience in Linux and Mac OSs, CI/CD
+            automation/management (Jenkins) Experience with configuration
+            management and automation (Terraform, Ansible). Computer Science
+            Student at UoPeople, California, USA. Kindly find me on
+            <a href="https://github.com/Seyi-Ojo" target="_blank">
+              <i class="fa-brands fa-github"></i
+            ></a>
+          </p>
           <i>Fun fact, I designed and coded these web pages! </i>
-        </p>
-        <!-- changed the class to hire section and the button gave an ID to it called hire button I don' t see an hireMeFormInner that can be from somewhere else  -->
-        <div class="hire_section">
-          <button id="hire-button">Hire Me</button>
+           
         </div>
       </div>
-      <div class="welcome_image">
-        <img src="./src/img/welcome-image.JPG" />
+
+      <!-- Second Column with centered div and image -->
+      <div class="grid-item">
+        <div class="img-div">
+          <img
+            src="/src/img/welcome-image-edited.jpg"
+            alt="Placeholder Image"
+          />
+        </div>
       </div>
     </div>
 
-    <!-- <div class="contact" id="contacts"> -->
-    <!-- I am taking off all those fairies and I will add icons for them instead using   -->
-    <!-- <a href="mailto:seyidiamond11@gmail.com" target="_blank">
-          <i class="fa-regular fa-envelope"></i>
-        </a>
-        <a href="https://github.com/Seyi-Ojo">
-          <i class="fa-brands fa-github"></i>
-        </a>
-        <a href="https://twitter.com/the_cloudfairy">
-          <i class="fa-brands fa-square-x-twitter"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/mayowa-ojo-thecloudfairy/">
-          <i class="fa-brands fa-linkedin"></i>
-        </a>
-      </div> -->
+    <!-- I changed this to your footer since you don't have one make it look a little more organize for me you don't have to do this -->
+    <footer>
+      <div class="contact" id="contacts">
+          <a href="mailto:seyidiamond11@gmail.com" target="_blank">
+              <i class="fa-regular fa-envelope"></i>
+          </a>
+          <a href="https://github.com/Seyi-Ojo" target="_blank">
+              <i class="fa-brands fa-github"></i>
+          </a>
+          <a href="https://twitter.com/the_cloudfairy" target="_blank">
+              <i class="fa-brands fa-square-x-twitter"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/mayowa-ojo-thecloudfairy/" target="_blank">
+              <i class="fa-brands fa-linkedin"></i>
+          </a>
+      </div>
+  </footer>
   </body>
 </html>

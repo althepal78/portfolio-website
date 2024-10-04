@@ -2,56 +2,64 @@ body {
   background-color: black;
 }
 
-.welcome {
+/* Grid setup for main content */
+.grid-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, 750px);
-  align-items: center;
-  justify-content: center;
-  min-height: 100svh;
-  width: 100svw;
-  color: white;
-}
-.welcome .greeting {
-  width: 100%;
-  text-align: left;
-  margin: 1rem;
-  line-height: 2.5rem;
-}
-.welcome .greeting h1 {
-  font-size: var(--clamp-h1);
-}
-.welcome .greeting p {
-  width: var(--clamp-paragraph-text);
-  font-size: var(--clamp-regular-text);
-  text-indent: 0.8rem;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(300px, 1fr)
+  ); /* Adjusted to make the left side wider */
+  height: calc(100vh - 5rem); /* Adjust height based on header */
+  gap: 1.25rem; /* Converted from 20px to rem */
 }
 
-.welcome .welcome_image {
+/* Center divs in grid cells this is so we can center each side*/
+.grid-item {
   display: flex;
   justify-content: center;
-  
+  align-items: center;
 }
 
-.welcome .welcome_image img {
-  width: clamp(10rem, 15svw, 20rem);
+/* Left column content */
+.centered-div {
+  padding: 1.25rem; /* Converted from 20px to rem */
+  width: 100%; /* Take up the full width of its grid cell */
+  max-width: var(
+    --clamp-paragraph-text
+  ); /* Use clamp rule for responsive width */
+  text-align: left; /* Align the text to the left */
+}
+
+/* White color for all  */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  color: white;
+}
+
+/* Indentation for paragraph */
+.centered-div p {
+  text-indent: 1.25rem; /* Converted from 20px to rem */
+  font-size: var(--clamp-regular-text);
+  text-wrap: pretty;
+}
+.centered-div h1 {
+  font-size: clamp(--clamp-h1);
+  padding: 0.4rem;
+}
+
+/* Style for the second div with the image */
+.img-div img {
+  max-width: 100%;
+  height: auto;
   transform: rotate(8deg);
-  transition: all 0.3s ease-in-out;
   border-radius: 10px;
+  transition: transform 0.3s ease;
 }
-.welcome .welcome_image img:hover {
+.img-div img:hover {
   transform: rotate(0deg);
-}
-
-.hire_section button {
-  color: purple;
-  font-size: 20px;
-  font-family: Georgia, "Times New Roman", Times, serif;
-  padding-inline: 22px;
-  padding-block: 8px;
-  cursor: pointer;
-  margin-top: 1rem;
-  border: none;
-}
-.intro a {
-  color: rgb(237, 105, 237);
 }
