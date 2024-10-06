@@ -1,0 +1,43 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css');
+
+/* Now you can use the Font Awesome classes as you normally would in your CSS */
+
+:root {
+  /* colors for the area  */
+  --primary-color: #6a1b9a;
+  --secondary-color: #8e24aa;
+  --text-color: #fff;
+  --hover-color: #ea6cea;
+  --font-family: 'Poppins', sans-serif;
+
+  /* clamps for you  */
+  --clamp-regular-text: clamp(0.8rem, 2svw, 1.8rem); 
+  --clamp-h1: clamp(1.2rem, 2svw, 3rem);
+  --clamp-h2: clamp(1rem, 4svw, 2rem);
+  --contact-me-clamp: clamp(1rem, 5svw, 2rem);
+  --clamp-paragraph-text: clamp(38ch, 60svw, 80ch);
+}
+
+/* Reset CSS */
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Global font and size reset */
+html {
+  scroll-behavior: smooth;
+  font-size: 100%; /* 16px by default */
+  line-height: 1.6;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'EB Garamond', serif;
+  font-weight: 500;
+  background-color: black; /* Modify per theme */
+}

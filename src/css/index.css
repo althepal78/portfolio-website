@@ -1,65 +1,58 @@
 body {
   background-color: black;
 }
-
-/* Grid setup for main content */
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(300px, 1fr)
-  ); /* Adjusted to make the left side wider */
-  height: calc(100vh - 5rem); /* Adjust height based on header */
-  gap: 1.25rem; /* Converted from 20px to rem */
+nav ul li a {
+  color: white;
 }
 
-/* Center divs in grid cells this is so we can center each side*/
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  height: calc(100vh - 5rem);
+  gap: 1.25rem;
+}
+
 .grid-item {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/* Left column content */
 .centered-div {
-  padding: 1.25rem; /* Converted from 20px to rem */
-  width: 100%; /* Take up the full width of its grid cell */
-  max-width: var(
-    --clamp-paragraph-text
-  ); /* Use clamp rule for responsive width */
-  text-align: left; /* Align the text to the left */
+  padding: 1.25rem;
+  width: 100%;
+  max-width: var(--clamp-paragraph-text);
+  text-align: left;
 }
-
-/* White color for all  */
+.centered-div .italic{
+  color:white;
+  padding:.5;
+  margin:.5;
+  font-size: large;
+}
+.centered-div img{
+  max-width: 2.5rem;
+}
 h1,
 h2,
 h3,
-h4,
-h5,
-h6,
 p {
   color: white;
 }
-
-/* Indentation for paragraph */
+.centered-div h1{
+  font-size: var(--clamp-h1);
+}
 .centered-div p {
-  text-indent: 1.25rem; /* Converted from 20px to rem */
+  text-indent: 1.25rem;
   font-size: var(--clamp-regular-text);
-  text-wrap: pretty;
-}
-.centered-div h1 {
-  font-size: clamp(--clamp-h1);
-  padding: 0.4rem;
 }
 
-/* Style for the second div with the image */
 .img-div img {
   max-width: 100%;
-  height: auto;
   transform: rotate(8deg);
-  border-radius: 10px;
   transition: transform 0.3s ease;
 }
+
 .img-div img:hover {
   transform: rotate(0deg);
 }

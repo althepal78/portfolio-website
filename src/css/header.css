@@ -1,49 +1,10 @@
-/*  importing fonts for the site roboto is a nicer one */
-
-@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
-
-/* adding this so that nothing haves a margin or padding and all the boxes are border box */
-*,
-*::before,
-*::after {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
-/* using a root to declare variables for fonts and colors  */
-:root {
-  /* font variables */
-  --clamp-nav-bar-links: clamp(0.5rem, 5svw, 2rem);
-  --clamp-regular-text: clamp(0.5rem, 3.5svw, 1.8rem);
-  --clamp-h1: clamp(1.2rem, 4svw, 3rem);
-  --clamp-h2: clamp(1rem, 4svw, 2rem);
-  --contact-me-clamp: clamp(1rem, 5svw, 2rem);
-  --clamp-paragraph-text: clamp(38ch, 60svw, 75ch);
-  /* color variables */
-  --hover-color: #ea6cea;
-}
-/*  I will start using media queries in the bottom to change out the layout to mobile but clamp works up to 500px  */
-/* adding smooth scrolling to the html I prefer to add it here you can add it to the html file itself */
-html {
-  scroll-behavior: smooth;
-  line-height: 2rem;
-}
-body {
-  font-family: "EB Garamond", serif;
-  font-optical-sizing: auto;
-  font-weight: 500;
-  font-style: normal;
-  overflow-x: clip;
-}
-
-/* Header styles for the navbar */
+/* Header styles */
 header {
   color: white;
   padding: 15px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: center; 
 }
 
 /* Logo styles */
@@ -55,21 +16,46 @@ header {
 
 /* Navigation bar styles */
 nav ul {
-  list-style: none;
   display: flex;
-  gap: 20px; 
-  margin:1rem;
+  list-style: none;
+  justify-content: space-around;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  padding: 0.5rem 1rem;
 }
 
 nav ul li a {
-  color: white;
   text-decoration: none;
+  color: white; /* Default text color */
   font-size: var(--clamp-regular-text);
+  position: relative;
+  transition: all 0.3s ease-in-out;
 }
-nav ul li a.active {
-  color: #ea6cea;
-  text-decoration: underline;
+
+
+nav ul li .active{
+  color: var( --hover-color);
 }
+
+nav ul li a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: var(--hover-color);
+  bottom: -5px;
+  left: 0;
+  transition: width 0.3s ease-in-out;
+}
+
+nav ul li a:hover::after,
+nav ul li a.active::after {
+  width: 100%;
+}
+
 nav ul li a:hover {
-  text-decoration: underline;
+  color: var(--hover-color); /* Change the text color to the pink hover color on hover */
 }

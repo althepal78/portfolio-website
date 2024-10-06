@@ -1,29 +1,28 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- adding the link to font awesome fonts  -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
+    <meta
+      name="description"
+      content="Mayowa Oluwaseyi Ojo's portfolio, DevOps Engineer, SRE, Technical Writer."
     />
-
+    <meta property="og:title" content="Mayowa Oluwaseyi Ojo's Portfolio" />
+    <meta
+      property="og:description"
+      content="DevOps Engineer, Site Reliability Engineer, and Technical Writer."
+    />
+    <meta property="og:image" content="/path/to/image.jpg" />
+    <!-- Your preview image -->
     <title>Mayowa Oluwaseyi Ojo's Portfolio</title>
-    <!-- I am adding an image to the top of your page called a favicon or favorite icon.
-         This will show something other than a bland cirle on the top of the page     
-    -->
-    <link rel="shortcut icon" href="./src/img/fairy.gif" type="image/x-icon" />
-    <link rel="stylesheet" href="./src/css/header.css" />
 
-    <link rel="stylesheet" href="./src/css/footer.css" />
+    <link rel="shortcut icon" href="./src/img/fairy.gif" type="image/x-icon" />
+
+    <link rel="stylesheet" href="./src/css/reset.css" />
+    <link rel="stylesheet" href="./src/css/header.css" />
     <link rel="stylesheet" href="./src/css/index.css" />
+    <link rel="stylesheet" href="./src/css/footer.css" />
     <script defer src="./src/js/main.js"></script>
   </head>
   <body>
@@ -34,7 +33,7 @@
         <ul>
           <li><a class="active" href="/">Home</a></li>
           <li><a href="/src/html/about.html">About</a></li>
-          <li><a href="/src/html/contact.html">Contact Me</a></li>
+          <li><a href="/src/html/contact.html">Contact</a></li>
           <li>
             <a href="https://medium.com/@thecloudfairy" target="_blank">Blog</a>
           </li>
@@ -47,19 +46,12 @@
       <!-- First Column with centered block of text -->
       <div class="grid-item">
         <div class="centered-div">
-          <h1>Hello, It's me, CloudFairy!🌩️🧚‍♀️</h1>
+          <h1>Hello, It's me, CloudFairy! &nbsp;&nbsp;&nbsp;<img src="/src/img/fairy.gif" alt="fairy pic"></h1>
           <p>
-            I am a Cloud Engineer. I solve problems for a living and work
-            diligently. Advanced experience in Linux and Mac OSs, CI/CD
-            automation/management (Jenkins) Experience with configuration
-            management and automation (Terraform, Ansible). Computer Science
-            Student at UoPeople, California, USA. Kindly find me on
-            <a href="https://github.com/Seyi-Ojo" target="_blank">
-              <i class="fa-brands fa-github"></i
-            ></a>
+            Hello! I'm a dedicated Cloud Engineer passionate about solving problems and making technology work for everyone. I have advanced experience in Linux and Mac operating systems, CI/CD automation with Jenkins, and configuration management using Terraform and Ansible. Currently, I'm also a Computer Science student at UoPeople in California, USA. Feel free to reach out to connect!
+             
           </p>
-          <i>Fun fact, I designed and coded these web pages! </i>
-           
+          <i class="italic">Interestingly, I conceptualized and meticulously crafted the design and code for these web pages!</i>
         </div>
       </div>
 
@@ -77,19 +69,27 @@
     <!-- I changed this to your footer since you don't have one make it look a little more organize for me you don't have to do this -->
     <footer>
       <div class="contact" id="contacts">
-          <a href="mailto:seyidiamond11@gmail.com" target="_blank">
-              <i class="fa-regular fa-envelope"></i>
-          </a>
-          <a href="https://github.com/Seyi-Ojo" target="_blank">
-              <i class="fa-brands fa-github"></i>
-          </a>
-          <a href="https://twitter.com/the_cloudfairy" target="_blank">
-              <i class="fa-brands fa-square-x-twitter"></i>
-          </a>
-          <a href="https://www.linkedin.com/in/mayowa-ojo-thecloudfairy/" target="_blank">
-              <i class="fa-brands fa-linkedin"></i>
-          </a>
+        <a
+          href="mailto:seyidiamond11@gmail.com"
+          target="_blank"
+          aria-label="Send me an email"
+        >
+          <i class="fa-regular fa-envelope"></i>
+        </a>
+
+        <a href="https://github.com/Seyi-Ojo" target="_blank">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="https://twitter.com/the_cloudfairy" target="_blank">
+          <i class="fa-brands fa-square-x-twitter"></i>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/mayowa-ojo-thecloudfairy/"
+          target="_blank"
+        >
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
       </div>
-  </footer>
+    </footer>
   </body>
 </html>

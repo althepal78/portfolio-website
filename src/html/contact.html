@@ -13,6 +13,7 @@
       referrerpolicy="no-referrer"
     />
     <title>Contact file</title>
+    <link rel="stylesheet" href="../css/reset.css" />
     <link rel="stylesheet" href="../css/header.css" />
     <link rel="stylesheet" href="../css/footer.css" />
     <link rel="stylesheet" href="../css/contact.css" />
@@ -26,7 +27,7 @@
           <li><a href="/">Home</a></li>
           <li><a href="/src/html/about.html">About</a></li>
           <li>
-            <a class="active" href="/src/html/contact.html">Contact Me</a>
+            <a class="active" href="/src/html/contact.html">Contact</a>
           </li>
           <li>
             <a href="https://medium.com/@thecloudfairy" target="_blank">Blog</a>
@@ -36,42 +37,51 @@
     </header>
 
     <div class="container">
-      <div class="contact-box">
-        <div class="left"></div>
-        <div class="right">
-          <h2>Contact Me</h2>
-          <input type="text" class="field" placeholder="Your name" />
-          <input type="email" class="field" placeholder="Your email" />
-          <textarea
-            class="field area"
-            placeholder="Leave a message for me"
-          ></textarea>
-          <select>
-            <option value="" disabled selected>Select Urgency</option>
-            <option value="can wait">Can wait</option>
-            <option value="Inapplicable">Inapplicable</option>
-            <option value="urgent">Urgent</option>
-            <option value="very urgent">Very urgent</option>
-          </select>
-          <button class="btn">Submit</button>
-        </div>
+      <div class="left">
+        <img src="../img/contact.png" alt="Contact Image" />
+      </div>
+      <div class="right">
+        <h2>Contact Me</h2>
+        <input type="text" class="field" placeholder="Your name" />
+        <input type="email" class="field" placeholder="Your email" />
+        <textarea
+          class="field area"
+          placeholder="Leave a message for me"
+        ></textarea>
+        <select>
+          <option value="" disabled selected>Select Urgency</option>
+          <option value="can wait">Can wait</option>
+          <option value="Inapplicable">Inapplicable</option>
+          <option value="urgent">Urgent</option>
+          <option value="very urgent">Very urgent</option>
+        </select>
+        <button class="btn">Submit</button>
       </div>
     </div>
+
     <footer>
       <div class="contact" id="contacts">
-          <a href="mailto:seyidiamond11@gmail.com" target="_blank">
-              <i class="fa-regular fa-envelope"></i>
-          </a>
-          <a href="https://github.com/Seyi-Ojo" target="_blank">
-              <i class="fa-brands fa-github"></i>
-          </a>
-          <a href="https://twitter.com/the_cloudfairy" target="_blank">
-              <i class="fa-brands fa-square-x-twitter"></i>
-          </a>
-          <a href="https://www.linkedin.com/in/mayowa-ojo-thecloudfairy/" target="_blank">
-              <i class="fa-brands fa-linkedin"></i>
-          </a>
+        <a
+          href="mailto:seyidiamond11@gmail.com"
+          target="_blank"
+          aria-label="Send me an email"
+        >
+          <i class="fa-regular fa-envelope"></i>
+        </a>
+
+        <a href="https://github.com/Seyi-Ojo" target="_blank">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="https://twitter.com/the_cloudfairy" target="_blank">
+          <i class="fa-brands fa-square-x-twitter"></i>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/mayowa-ojo-thecloudfairy/"
+          target="_blank"
+        >
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
       </div>
-  </footer>
+    </footer>
   </body>
 </html>

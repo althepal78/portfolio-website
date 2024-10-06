@@ -1,129 +1,71 @@
- 
-body{
-    background-color: purple;
+body {
+  background-color: rgb(85, 13, 167);
 }
 
-.container{
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 90%;
-    padding-left: 10px;
-    padding: 20px 40px;
-    background: url("./contact_filebgdi.png");
-    background-position: center;
-    background-size: cover;
+header nav ul a.active {
+  color: var(--hover-color);
 }
-.container:after{
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: purple;
-    /* background: url("./a_picture_of_me.jpg") no-repeat center; */
-    background-size: cover;
-    z-index: -1;
-    /* filter: blur(50px); */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch; /* Make both sides stretch to the same height */
+  padding: 20px 40px;
+  width: 80%; /* Set the container width to 80% */
+  margin: auto; /* Center the container */
 }
-.contact-box{
-    max-width: 950px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background-color: #fff;
-    box-shadow: 0px 0px 19px 5px rgba(0, 0, 0, 0.19);
-    border: 10px solid black;
+
+.container .left {
+  width: 300px; /* Fixed width for the left section */
+  background: white; /* White background for the left section */
 }
-.left{
-    height: 100%;
-    background: url("./a_picture_of_me.jpg") no-repeat center;
-    background-size: cover;
+
+.container .left img {
+  width: 100%; /* Make the image responsive */
+  height: auto; /* Maintain aspect ratio */
 }
-.right{
-    padding: 25px 40px;
-    border-left: 7px solid rgb(237, 105, 237);
-    margin-right: 25px;
+
+.container .right {
+  flex: 1; /* Take up remaining space */
+  padding: 2rem; /* Padding for better spacing */
+  background: white; /* White background for the right section */
+  font-size: var(--clamp-regular-text); /* Responsive text */
 }
-h2{
-    position:relative;
-    padding-bottom: 10px;
-    margin-bottom: 10px;
-    color: black;
+
+.container .field {
+  width: 100%; /* Full width */
+  padding: 0.5rem; /* Padding for comfort */
+  margin-bottom: 1rem; /* Spacing between inputs */
+  border: 1px solid #ccc; /* Light border */
+  border-radius: 5px; /* Rounded corners */
 }
-h2:after{
-    content: '';
-    position: absolute;
-    left: 50%;
-    bottom: 0;
-    transform: translateX(-50%);
-    height: 4px;
-    width: 50px;
-    border-radius: 2px;
-    background-color: black;
+
+.container .btn {
+  background-color: #007bff; /* Button color */
+  color: white; /* Button text color */
+  padding: 0.5rem 1rem; /* Button padding */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer on hover */
 }
-.field{
-    width: 100%;
-    padding: 0.5rem 1rem;
-    outline: none;
-    border: 2px solid rgb(237, 105, 237);
-    border-radius: 7px;
-    background-color: rgba(230, 230, 230, 0.6);
-    font-size: 1.0rem;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    margin-bottom: 22px;
-    transition: .3s;
+
+.container .btn:hover {
+  background-color: #0056b3; /* Darker blue on hover */
 }
-.field:hover{
-    background-color: rgba(0, 0, 0, 0.1);
+
+/* Media query for responsiveness */
+@media (max-width:730px) {
+  .container {
+      flex-direction: column; /* Stack items vertically on small screens */
+      align-items: center; /* Center items */
+  }
+
+  .container .left {
+      width: 100%; /* Full width on small screens */
+      height: auto; /* Adjust height automatically */
+      padding: 1rem;
+  }
+
+  .container .right {
+      padding: 1rem; /* Adjust padding for smaller screens */
+  }
 }
-.field:focus{
-    background-color: #fff;
-    border: 2px solid rgb(237, 105, 237);
-}
-.area{
-    min-height: 150px;
-    margin-bottom: 5px;
-}
-.right select{
-    width: 100%;
-    margin-top: 2px;
-    margin-bottom: 20px;
-    color: rgb(119, 1, 1);
-    font-size: 15px;
-    border: 2px solid rgb(237, 105, 237);
-    border-radius: 7px;
-    padding: 5px;
-}
-.right select:hover{
-    background-color: #27ae60;
-}
-.btn{
-    width: 50%;
-    padding: 0.5rem 1rem;
-    font-size: 1.1rem;
-    background-color: purple;
-    cursor: pointer;
-    outline: none;
-    border: 3px solid rgb(237, 105, 237);
-    border-radius: 20px;
-    transition: .3s;
-    color: #fff;
-}
-.btn:hover{
-    background-color: #27ae60;
-}
-@media screen and (max-width:880px) {
-    .contact-box{
-        grid-template-columns: 1fr;
-    }
-    .left{
-        height: 200px;
-    }
-}
- 
